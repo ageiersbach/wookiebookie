@@ -34,10 +34,7 @@ ActiveRecord::Schema.define(:version => 20140130154613) do
     t.float    "odds"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.integer  "race_id"
   end
-
-  add_index "wookies", ["race_id"], :name => "index_wookies_on_race_id"
 
   create_table "wookies_races", :force => true do |t|
     t.integer "wookie_id"
