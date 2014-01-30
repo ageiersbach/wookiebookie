@@ -2,10 +2,4 @@
 
 An app to track your wookie races!
 
-###Models:
-
- - wookies
- - races
- - bets
- - users
-
+> This app was created to play with Rspec, Capybara & FactoryGirl
