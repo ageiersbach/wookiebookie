@@ -22,6 +22,8 @@ end
 
 group :test do
   gem 'factory_girl_rails'
+  gem 'fuubar'
+  gem 'fuubar-cucumber'
   gem 'capybara'
   gem 'database_cleaner'
 end
