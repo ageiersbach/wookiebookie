@@ -1,0 +1,29 @@
+<%= form_for(@wooky) do |f| %>
+  <% if @wooky.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wooky.errors.count, "error") %> prohibited this wooky from being saved:</h2>
+
+      <ul>
+      <% @wooky.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :best_time %><br />
+    <%= f.text_field :best_time %>
+  </div>
+  <div class="field">
+    <%= f.label :odds %><br />
+    <%= f.text_field :odds %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
