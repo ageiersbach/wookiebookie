@@ -1,0 +1,23 @@
+%h1 
+  Welcome to the wookie races!
+
+%table
+  %tr
+    %th Location
+    %th Winner
+
+- @races.each do |race| 
+  %tr
+    %td
+      = race.location 
+    %td
+      = race.winner_id 
+    %td
+      = link_to 'Show', race 
+    %td
+      = link_to 'Edit', edit_race_path(race) 
+    %td
+      = link_to 'Destroy', race, method: :delete, data: { confirm: 'Are you sure?' } 
+
+
+= link_to 'New Race', new_race_path 
