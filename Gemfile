@@ -26,6 +26,7 @@ group :test do
   gem 'fuubar-cucumber'
   gem 'capybara'
   gem 'database_cleaner', '1.0.1'
+  gem 'faker'
 end
 
 group :development, :test do

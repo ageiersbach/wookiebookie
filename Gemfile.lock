@@ -57,6 +57,8 @@ GEM
     factory_girl_rails (4.0.0)
       factory_girl (~> 4.0.0)
       railties (>= 3.0.0)
+    faker (1.2.0)
+      i18n (~> 0.5)
     fuubar (1.1.0)
       rspec (~> 2.0)
       rspec-instafail (~> 0.2.0)
@@ -152,6 +154,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   database_cleaner (= 1.0.1)
   factory_girl_rails
+  faker
   fuubar
   fuubar-cucumber
   haml
