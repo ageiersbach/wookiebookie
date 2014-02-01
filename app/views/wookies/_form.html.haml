@@ -1,0 +1,10 @@
+= form_for @wooky do |f|
+  - if @wooky.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@wooky.errors.count, "error")} prohibited this wooky from being saved:"
+      %ul
+        - @wooky.errors.full_messages.each do |msg|
+          %li= msg
+
+  .actions
+    = f.submit 'Save'
