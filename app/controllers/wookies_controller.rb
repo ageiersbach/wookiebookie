@@ -2,7 +2,7 @@ class WookiesController < ApplicationController
   # GET /wookies
   # GET /wookies.json
   def index
-    @wookies = Wookie.all
+    @wookies = Wooky.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class WookiesController < ApplicationController
   # GET /wookies/1
   # GET /wookies/1.json
   def show
-    @wooky = Wookie.find(params[:id])
+    @wooky = Wooky.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class WookiesController < ApplicationController
   # GET /wookies/new
   # GET /wookies/new.json
   def new
-    @wooky = Wookie.new
+    @wooky = Wooky.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +34,17 @@ class WookiesController < ApplicationController
 
   # GET /wookies/1/edit
   def edit
-    @wooky = Wookie.find(params[:id])
+    @wooky = Wooky.find(params[:id])
   end
 
   # POST /wookies
   # POST /wookies.json
   def create
-    @wooky = Wookie.new(params[:wooky])
+    @wooky = Wooky.new(params[:wooky])
 
     respond_to do |format|
       if @wooky.save
-        format.html { redirect_to @wooky, notice: 'Wookie was successfully created.' }
+        format.html { redirect_to @wooky, notice: 'Wooky was successfully created.' }
         format.json { render json: @wooky, status: :created, location: @wooky }
       else
         format.html { render action: "new" }
@@ -56,11 +56,11 @@ class WookiesController < ApplicationController
   # PUT /wookies/1
   # PUT /wookies/1.json
   def update
-    @wooky = Wookie.find(params[:id])
+    @wooky = Wooky.find(params[:id])
 
     respond_to do |format|
       if @wooky.update_attributes(params[:wooky])
-        format.html { redirect_to @wooky, notice: 'Wookie was successfully updated.' }
+        format.html { redirect_to @wooky, notice: 'Wooky was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -72,7 +72,7 @@ class WookiesController < ApplicationController
   # DELETE /wookies/1
   # DELETE /wookies/1.json
   def destroy
-    @wooky = Wookie.find(params[:id])
+    @wooky = Wooky.find(params[:id])
     @wooky.destroy
 
     respond_to do |format|

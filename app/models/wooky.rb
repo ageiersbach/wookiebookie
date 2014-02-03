@@ -1,5 +1,5 @@
-class Wookie < ActiveRecord::Base
+class Wooky < ActiveRecord::Base
   attr_accessible :best_time, :name, :odds
   has_and_belongs_to_many :races
-  has_many :bets
+  has_many :bets, :dependent => :destroy
 end
