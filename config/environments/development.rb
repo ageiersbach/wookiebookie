@@ -1,4 +1,5 @@
 Wookiebookie::Application.configure do
+  Rails.application.routes.default_url_options[:host]= 'localhost:3000' 
   # Settings specified here will take precedence over those in config/application.rb
 
   # In the development environment your application's code is reloaded on
@@ -29,6 +30,8 @@ Wookiebookie::Application.configure do
   # with SQLite, MySQL, and PostgreSQL)
   config.active_record.auto_explain_threshold_in_seconds = 0.5
 
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  
   # Do not compress assets
   config.assets.compress = false
 
