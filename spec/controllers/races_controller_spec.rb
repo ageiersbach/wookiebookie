@@ -1,10 +1,11 @@
 require 'spec_helper'
 
 describe RacesController do
-  let!(:race) { create(:race, location: "Boston")}
+  let!(:race) { create(:race)}
 
   describe "GET#index" do
     it "assigns all races as @races" do
+      puts race
       get :index
       expect(assigns(:races)).to eq([race])
     end
@@ -26,7 +27,6 @@ describe RacesController do
 
   describe "GET edit" do
     it "assigns the requested race as @race" do
-      race = create(:race)
       get :edit, id: race
       expect(assigns(:race)).to eq(race)
     end

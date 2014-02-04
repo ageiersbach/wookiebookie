@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe BetsController do
 
-  let!(:bet){ create(:bet, owner: "Luke Skywalker", amount: 100.00) }
+  let!(:bet){ create(:bet, owner: "Luke Skywalker", wager_cents: 500) }
 
   describe "GET#index" do
     it "assigns all bets as bets" do
@@ -86,7 +86,7 @@ describe BetsController do
       it "updates the requested bet" do
         put :update, id: bet, bet: attributes_for(:bet)
         bet.reload
-        expect(bet.amount).to eq('50.00'.to_d)
+        expect(bet.wager_cents).to eq(100)
         expect(bet.owner).to eq("Darth Vader")
       end
 

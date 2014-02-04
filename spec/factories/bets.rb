@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :bet do
-    amount '50.00'
+    wager_cents '100'
     owner 'Darth Vader'
   end
 end

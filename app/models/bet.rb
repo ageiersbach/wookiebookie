@@ -1,14 +1,14 @@
 class Bet < ActiveRecord::Base
-  attr_accessible :amount, :owner
-  belongs_to :wookie
-  validate :amount, :presence => true 
+  attr_accessible :owner, :wager_cents
+  belongs_to :wooky
+  monetize :wager_cents
+  validates_presence_of :wager_cents
   validate :cannot_be_negative
 
   private
   def cannot_be_negative 
-    amount = self.amount.to_f()
-    if (amount <= 0.0)
-      errors.add(:amount, "Amount cannot be less than $1")
+    if (wager_cents && wager_cents < 100)
+      errors.add(:wager_cents, "Wager cannot be less than $1")
     end
   end
 end

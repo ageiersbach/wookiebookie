@@ -4,15 +4,15 @@ describe Bet do
   
   let!(:bet) { create(:bet) }
   
-  describe "validates the amount" do
+  describe "validates the wager" do
   
-    it "a nil amount will not validate" do
-      bad_bet = Bet.new(amount: nil)
+    it "will not validate without a wager" do
+      bad_bet = Bet.new(wager_cents: nil)
       expect(bad_bet).to_not be_valid
     end
     
     it "a negative amount will not validate" do
-      negative_bet = Bet.new(amount: -1.90)
+      negative_bet = Bet.new(wager_cents:-200)
       expect(negative_bet).to_not be_valid 
     end
 

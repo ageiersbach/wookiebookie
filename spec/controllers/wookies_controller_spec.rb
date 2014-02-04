@@ -1,13 +1,13 @@
 require 'spec_helper'
 
 describe WookiesController do
-   let!(:chewwie){ create(:wookie) }
+   let!(:wooky){ create(:wookie) }
    let!(:pogo){ create(:wookie, name:"Pogo")}
 
   describe "GET#index" do
     it "assigns all wookies as @wookies" do
       get :index
-      expect(assigns(:wookies)).to eq([chewwie, pogo])
+      expect(assigns(:wookies)).to eq([wooky, pogo])
     end
 
     it "renders the :index view" do
@@ -34,8 +34,8 @@ describe WookiesController do
 
   describe "GET edit" do
     it "assigns the requested wookie as @wookie" do
-      get :edit, id: chewwie.id 
-      expect(assigns(:wooky).name).to eq("Chewwie")
+      get :edit, id: wooky 
+      expect(assigns(:wooky)).to eq(wooky)
     end
   end
 
