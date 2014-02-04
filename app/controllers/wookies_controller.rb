@@ -44,7 +44,7 @@ class WookiesController < ApplicationController
 
     respond_to do |format|
       if @wooky.save
-        format.html { redirect_to @wooky, notice: 'Wooky was successfully created.' }
+        format.html { redirect_to @wooky, notice: "#{@wooky.name} was successfully added to the ranks." }
         format.json { render json: @wooky, status: :created, location: @wooky }
       else
         format.html { render action: "new" }
@@ -60,7 +60,7 @@ class WookiesController < ApplicationController
 
     respond_to do |format|
       if @wooky.update_attributes(params[:wooky])
-        format.html { redirect_to @wooky, notice: 'Wooky was successfully updated.' }
+        format.html { redirect_to @wooky, notice: "#{@wooky.name} has been successfully updated." }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -73,10 +73,11 @@ class WookiesController < ApplicationController
   # DELETE /wookies/1.json
   def destroy
     @wooky = Wooky.find(params[:id])
+    wooky_name = @wooky.name
     @wooky.destroy
 
     respond_to do |format|
-      format.html { redirect_to wookies_url }
+      format.html { redirect_to wookies_url, notice: "It is never easy to lose a colleague; we wish #{wooky_name} the best retirement a wookie could want!" }
       format.json { head :no_content }
     end
   end

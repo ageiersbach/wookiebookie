@@ -1,6 +1,9 @@
 %p#notice= notice
 
+%p
+  = @wooky.name
 
+= button_to "Retire", @wooky, :method => :delete 
 = link_to 'Edit', edit_wooky_path(@wooky)
 \|
 = link_to 'Back', wookies_path

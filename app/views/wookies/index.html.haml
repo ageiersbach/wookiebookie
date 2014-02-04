@@ -1,17 +1,19 @@
 %h1 Listing wookies
-
+%p#notice= notice
 %table
   %tr
+    %th Wooky Name
     %th
     %th
     %th
 
   - @wookies.each do |wooky|
     %tr
+      %td= wooky.name
       %td= link_to 'Show', wooky
       %td= link_to 'Edit', edit_wooky_path(wooky)
-      %td= link_to 'Destroy', wooky, method: :delete, data: { confirm: 'Are you sure?' }
-
+      %td= button_to "Retire", wooky, :method => :delete 
+     
 %br
 
 = link_to 'New Wookie', new_wooky_path
