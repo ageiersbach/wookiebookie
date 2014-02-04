@@ -85,6 +85,8 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.25.1)
+    money (5.1.1)
+      i18n (~> 0.6.0)
     multi_json (1.8.4)
     nokogiri (1.5.5)
     polyglot (0.3.3)
@@ -165,6 +167,7 @@ DEPENDENCIES
   haml
   haml-rails
   jquery-rails
+  money
   rails (= 3.2.13)
   rspec-rails
   sass-rails (~> 3.2.3)
