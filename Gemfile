@@ -5,7 +5,7 @@ gem 'rails', '3.2.13'
 gem 'haml'
 gem 'haml-rails'
 
-gem 'money'
+gem 'money-rails'
 
 gem 'sqlite3'
 
