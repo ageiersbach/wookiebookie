@@ -5,6 +5,19 @@
       %ul
         - @bet.errors.full_messages.each do |msg|
           %li= msg
+  .form-group
+    = f.label :owner
+    = f.text_field :owner
+ 
+  - wookies = Wooky.all  
+
+  .form-group
+    = f.label :wooky_id, "Wookies"
+    = f.select 'wooky_id', options_from_collection_for_select(wookies, 'id', 'name') 
+
+  .form-group
+    = f.label :wager_cents, "Wager" 
+    = f.number_field :wager_cents
 
   .actions
     = f.submit 'Save'

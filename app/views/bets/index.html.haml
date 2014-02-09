@@ -1,5 +1,5 @@
 %h1 Listing bets
-
+%p#notice= notice
 %table
   %tr
     %th
@@ -7,7 +7,11 @@
     %th
 
   - @bets.each do |bet|
+    - wookie = Wooky.find(bet.wooky_id)
     %tr
+      %td= bet.owner
+      %td= wookie.name
+      %td= bet.wager
       %td= link_to 'Show', bet
       %td= link_to 'Edit', edit_bet_path(bet)
       %td= link_to 'Destroy', bet, method: :delete, data: { confirm: 'Are you sure?' }

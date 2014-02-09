@@ -41,11 +41,10 @@ class BetsController < ApplicationController
   # POST /bets.json
   def create
     @bet = Bet.new(params[:bet])
-
+    
     respond_to do |format|
       if @bet.save
-        format.html { redirect_to @bet, notice: 'Bet was successfully created.' }
-        format.json { render json: @bet, status: :created, location: @bet }
+        format.html { redirect_to bets_url, notice: "Thank you, #{@bet.owner}. Your bet is on the books!" }
       else
         format.html { render action: "new" }
         format.json { render json: @bet.errors, status: :unprocessable_entity }
