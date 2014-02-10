@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140209215909) do
+ActiveRecord::Schema.define(:version => 20140210025749) do
 
   create_table "bets", :force => true do |t|
     t.string   "owner"
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(:version => 20140209215909) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "runs", :force => true do |t|
+    t.integer  "wooky_id"
+    t.integer  "race_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "runs", ["race_id", "wooky_id"], :name => "index_runs_on_race_id_and_wooky_id", :unique => true
+  add_index "runs", ["race_id"], :name => "index_runs_on_race_id"
+  add_index "runs", ["wooky_id"], :name => "index_runs_on_wooky_id"
 
   create_table "wookies", :force => true do |t|
     t.string   "name"
