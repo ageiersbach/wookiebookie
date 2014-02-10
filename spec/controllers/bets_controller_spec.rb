@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe BetsController do
 
-  let(:chewwie) { create(:wookie, :name => "Chewwie") }
   let!(:bet){ create(:bet, owner: "Luke Skywalker", wager_cents: 500) }
 
   describe "GET#index" do
@@ -47,7 +46,7 @@ describe BetsController do
     describe "with valid params" do
       it "creates a new Bet" do
         expect {
-          post :create, bet: attributes_for(:bet, :wooky_id => chewwie.id)
+          post :create, bet: attributes_for(:bet)
         }.to change(Bet, :count).by(1)
       end
 
@@ -57,7 +56,7 @@ describe BetsController do
       end
 
       it "redirects to the bets page after create" do
-        post :create, bet: attributes_for(:bet, :wooky_id => chewwie.id) 
+        post :create, bet: attributes_for(:bet) 
         expect(response).to redirect_to bets_url
       end
     end

@@ -3,7 +3,6 @@ class Bet < ActiveRecord::Base
   belongs_to :run
   monetize :wager_cents
   validates_presence_of :wager_cents
-  validates_presence_of :wooky_id
   validate :cannot_be_negative
 
   private
