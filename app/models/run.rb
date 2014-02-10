@@ -1,3 +1,5 @@
 class Run < ActiveRecord::Base
-  # attr_accessible :title, :body
+  belongs_to :wooky
+  belongs_to :race
+  has_many :bets
 end

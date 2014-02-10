@@ -1,6 +1,6 @@
 class Bet < ActiveRecord::Base
-  attr_accessible :owner, :wager_cents, :wooky_id
-  belongs_to :wooky
+  attr_accessible :owner, :wager_cents, :run_id
+  belongs_to :run
   monetize :wager_cents
   validates_presence_of :wager_cents
   validates_presence_of :wooky_id
