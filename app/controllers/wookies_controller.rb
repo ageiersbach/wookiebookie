@@ -44,7 +44,7 @@ class WookiesController < ApplicationController
 
     respond_to do |format|
       if @wooky.save
-        format.html { redirect_to @wooky, notice: "#{@wooky.name} was successfully added to the ranks." }
+        format.html { redirect_to wookies_path, notice: "#{@wooky.name} was successfully added to the ranks." }
         format.json { render json: @wooky, status: :created, location: @wooky }
       else
         format.html { render action: "new" }

@@ -55,7 +55,7 @@ describe WookiesController do
 
       it "redirects to the created wookie" do
         post :create, {:wooky => attributes_for(:wookie)}
-        expect(response).to redirect_to(Wooky.last)
+        expect(response).to redirect_to(wookies_path)
       end
     end
 
