@@ -78,11 +78,6 @@ describe RacesController do
         expect(assigns(:race)).to eq(race)
       end
 
-      it "assigns the requested race as @race" do
-        put :update, {:id => race, :race => attributes_for(:race)}
-        expect(assigns(:race)).to eq(race)
-      end
-
       it "redirects to the race" do
         put :update, {:id => race, :race => attributes_for(:race)} 
         expect(response).to redirect_to(race)
