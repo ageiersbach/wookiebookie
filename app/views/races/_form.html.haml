@@ -6,5 +6,8 @@
         - @race.errors.full_messages.each do |msg|
           %li= msg
 
+  = f.label :location
+  = f.text_field :location
+
   .actions
     = f.submit 'Save'
