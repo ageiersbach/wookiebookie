@@ -1,8 +1,8 @@
 1. Add 'rspec-rails' to Gemfile:
 
-	`group :development, :test do
-		gem 'rspec-rails'
-	end`
+		group :development, :test do
+			gem 'rspec-rails'
+		end
 
 2. Run 'bundle install'
 
