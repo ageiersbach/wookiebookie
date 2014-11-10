@@ -1,0 +1,11 @@
+{
+  "name": "Wookiebookie",
+  "description": "TODO: Add a short description about Wookiebookie",
+  "keywords": [
+    "small",
+    "sharp",
+    "tool"
+  ],
+  "addons": [],
+  "env": {}
+}
