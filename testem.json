@@ -1,3 +1,4 @@
 {
-  "test_page": "spec/javascripts/tests.html"
+  "test_page": "spec/javascripts/tests.html",
+  "launch_in_dev": ["Chrome", "Firefox", "Safari", "PhantomJS"]
 }
