@@ -1,4 +1,10 @@
 {
   "name":"WookieBookie",
-  "description":"An app to race wookies!"
+  "description":"Portal to the Wookie Mafia!",
+  "env":{
+    "wookie1_pass":"lkasdjflkjd09234~~~"
+  },
+  "scripts":{
+    "postdeploy":"bundle exec rake db:create && bundle exec rake db:migrate"
+  }
 }

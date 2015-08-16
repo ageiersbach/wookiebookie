@@ -19,7 +19,10 @@ test:
   timeout: 5000
 
 production:
-  adapter: sqlite3
-  database: db/production.sqlite3
-  pool: 5
+  adapter: postgresql
   timeout: 5000
+  encoding: unicode
+  pool: 5
+  database: wookie_db
+  username: wookie1
+  password: ENV['wookie1_pass']

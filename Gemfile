@@ -7,7 +7,7 @@ gem 'haml-rails'
 
 gem 'money-rails'
 
-gem 'sqlite3'
+gem 'pg'
 
 group :assets do
   gem 'sass-rails',   '~> 3.2.3'
@@ -26,6 +26,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'sqlite3' ## TODO: switch to postgres for test & dev
 end
 
 gem 'jquery-rails'
