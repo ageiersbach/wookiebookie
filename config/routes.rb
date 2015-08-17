@@ -1,5 +1,5 @@
 Wookiebookie::Application.routes.draw do
-  root :to => 'races#index' 
+  root :to => 'races#new'
 
   resources :bets
 
