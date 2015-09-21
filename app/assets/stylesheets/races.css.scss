@@ -2,6 +2,26 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$gray : #ccc;
+$black : #000;
+$red : #800000;
+
+@import url(https://fonts.googleapis.com/css?family=Sigmar+One);
+
+html, body {
+  background-color: $black !important; //TODO: FIND OUT WHYYYY THIS IS NECESSARY X_X WTF
+}
+
+#main {
+  color: $red;
+  text-align: center;
+}
+
+#main h1 {
+  font-size: 64px;
+  font-family: 'Sigmar One', cursive;
+}
+
 .race {
   margin: auto;
   width: 900px;
