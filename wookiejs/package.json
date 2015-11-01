@@ -1,0 +1,19 @@
+{
+  "name": "wookiejs",
+  "version": "1.0.0",
+  "description": "Wookies at the Keyboard, furiously coding them ecmascripts",
+  "main": "index.js",
+  "scripts": {
+    "test":"mocha --compilers js:babel-core/register",
+    "posttest":"babel lib -d ./../app/assets/javascripts/wookiejs"
+  },
+  "author": "A.Geiersbach",
+  "license": "ISC",
+  "dependencies": {
+    "babel": "^6.0.14",
+    "babel-cli": "latest",
+    "babel-preset-es2015":"^6.0.14",
+    "watch":"latest",
+    "mocha":"latest"
+  }
+}
